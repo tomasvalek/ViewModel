@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">ViewModel</string>
+    <string name="appName">ViewModel</string>
+    <string name="carTitle">Car data</string>
+    <string name="carNameHint">Name of car</string>
+    <string name="carFuelHint">Fuel</string>
+    <string name="btnNextToUser">Switch to user</string>
 </resources>
