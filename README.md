@@ -1,2 +1,2 @@
 # ViewModel
-Android Architecture ViewModel example.
+Android Architecture ViewModel example
