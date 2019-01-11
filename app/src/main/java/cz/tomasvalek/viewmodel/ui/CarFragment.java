@@ -1,11 +1,11 @@
 package cz.tomasvalek.viewmodel.ui;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,9 +47,9 @@ public class CarFragment extends Fragment {
 
 		//Associate the UI Controller and ViewModel
 		//ViewModelProviders.of(<Your UI controller>).get(<Your ViewModel>.class)
-		//It creates a new ViewModel instance. When this method is called again, which happens whenever
-		//onCreate is called, it will return the pre-existing ViewModel associated with the specific
-		//Court-Counter MainActivity. This is what preserves the data.
+		//If the activity is re-created, it receives the same MyViewModel instance that was created
+		// by the first activity. When the owner activity is finished, the framework calls
+		// the ViewModel objects's onCleared() method so that it can clean up resources.
 		mViewModel = ViewModelProviders.of(this).get(CarViewModel.class);
 
 		mViewModel.getCar().observe(this, new Observer<Car>() {

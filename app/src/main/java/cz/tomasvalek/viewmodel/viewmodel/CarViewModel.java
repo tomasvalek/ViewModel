@@ -1,7 +1,7 @@
 package cz.tomasvalek.viewmodel.viewmodel;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import cz.tomasvalek.viewmodel.model.Car;
 
